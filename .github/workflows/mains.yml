@@ -13,7 +13,6 @@ jobs:
     steps:
     - name: Limpiar directorio anterior
       run: |
-        rm -rf Zyno2 2>/dev/null || true
         sudo killall -9 python3 2>/dev/null || true
 
     - name: Clonar repositorio
